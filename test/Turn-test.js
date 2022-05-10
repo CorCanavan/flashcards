@@ -9,12 +9,11 @@ describe('Turn', () => {
   let turn;
 
   it('should be a function', () => {
-    const turn = new Turn();
     expect(Turn).to.be.a('function');
   });
 
   it('should be an instance of Turn', () => {
-    const turn = new Turn();
+    turn = new Turn();
     expect(turn).to.be.an.instanceOf(Turn);
   });
 
