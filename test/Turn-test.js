@@ -17,24 +17,38 @@ describe('Turn', () => {
   });
 
   it('should be instantiated with a string and a card object', () => {
-    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('object', card);
 
     expect(turn.guess).to.be.a('string');
     expect(turn.card).to.be.an('object');
-  })
+  });
 
   it('should return the guess', () => {
-    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('object', card);
 
     expect(turn.returnGuess()).to.equal('object');
-  })
+  });
 
   it('should return the card object', () => {
-    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object')
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('object', card);
 
-    expect(turn.returnCard()).to.equal(card);  
-  })
+    expect(turn.returnCard()).to.equal(card);
+  });
+
+  it('should evaluate guess to be true or false', () => {
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const turn = new Turn('object', card);
+
+    expect(turn.evaluateGuess()).to.equal(true);
+  });
+
+  it('should return incorrect or correct based on the guess', () => {
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    const turn = new Turn('object', card);
+
+    expect(turn.giveFeedback()).to.equal('correct!');
+  });
 });
