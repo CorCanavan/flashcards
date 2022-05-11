@@ -31,5 +31,13 @@ describe('Round', () => {
 
   it('should store a deck of cards', () => {
     expect(round.deck).to.equal(deck);
+  });
+
+  it('should have a turns property that starts at 0', () => {
+    expect(round.turns).to.equal(0);
+  });
+
+  it('should have an incorrectGuesses array that starts out empty', () => {
+    expect(round.incorrectGuesses).to.deep.equal([]);
   })
 });
