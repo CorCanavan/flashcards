@@ -26,11 +26,11 @@ describe('Round', () => {
     card2 = new Card(2, 'What is the only mammal that can fly?', ['flying squirrel', 'bat', 'monkey'], 'bat');
     card3 = new Card(3, 'What is a group of owls called?', ['murder', 'gaggle', 'parliament'], 'parliament');
     deck = new Deck([card1, card2, card3]);
-    round = new Round(deck);
+    round = new Round(deck.cardSet);
   });
 
   it('should store a deck of cards', () => {
-    expect(round.deck).to.equal(deck);
+    expect(round.deck).to.equal(deck.cardSet);
   });
 
   it('should have a turns property that starts at 0', () => {
@@ -39,5 +39,9 @@ describe('Round', () => {
 
   it('should have an incorrectGuesses array that starts out empty', () => {
     expect(round.incorrectGuesses).to.deep.equal([]);
+  });
+
+  it('should return current card being played', () => {
+    expect(round.returnCurrentCard()).to.equal(round.deck[0]);
   })
 });
