@@ -78,4 +78,19 @@ describe('Round', () => {
   it('should return incorrect when guess is false', () => {
     expect(round.takeTurn('elephant')).to.equal('incorrect!');
   });
+
+  it('should calculate percent correct', () => {
+    round.takeTurn('dog');
+    round.takeTurn('bat');
+
+    expect(round.turns).to.equal(2);
+    expect(round.incorrectGuesses.length).to.equal(1);
+    expect(round.calculatePercentCorrect()).to.equal(50);
+
+    round.takeTurn('murder');
+
+    expect(round.turns).to.equal(3);
+    expect(round.incorrectGuesses.length).to.equal(2);
+    expect(round.calculatePercentCorrect()).to.equal(33);
+  })
 });
