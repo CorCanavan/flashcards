@@ -52,7 +52,7 @@ describe('Round', () => {
 
     round.takeTurn('horse');
     expect(round.turns).to.equal(2);
-  })
+  });
 
   it('should return next card after a turn is taken', () => {
     expect(round.returnCurrentCard()).to.equal(card1);
@@ -60,5 +60,22 @@ describe('Round', () => {
     round.takeTurn('elephant');
 
     expect(round.returnCurrentCard()).to.equal(card2);
-  })
+  });
+
+  it('should store incorrect guesses in incorrectGuesses array', () => {
+    expect(round.incorrectGuesses).to.deep.equal([]);
+
+    round.takeTurn('dog');
+
+    expect(round.incorrectGuesses.length).to.equal(1);
+    expect(round.incorrectGuesses[0]).to.equal(card1.id)
+  });
+
+  it('should return correct when guess is true', () => {
+    expect(round.takeTurn('horse')).to.equal('correct!');
+  });
+
+  it('should return incorrect when guess is false', () => {
+    expect(round.takeTurn('elephant')).to.equal('incorrect!');
+  });
 });
