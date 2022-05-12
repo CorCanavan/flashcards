@@ -92,5 +92,19 @@ describe('Round', () => {
     expect(round.turns).to.equal(3);
     expect(round.incorrectGuesses.length).to.equal(2);
     expect(round.calculatePercentCorrect()).to.equal(33);
+  });
+
+  it('should return prompt with percent correct when endRound is called', () => {
+    const expectedPrompt = '** Round over! ** You answered 33% of the questions correctly!'
+
+    round.takeTurn('dog');
+    round.takeTurn('bat');
+    round.takeTurn('murder');
+
+    expect(round.turns).to.equal(3);
+    expect(round.incorrectGuesses.length).to.equal(2);
+    expect(round.calculatePercentCorrect()).to.equal(33);
+
+    expect(round.endRound()).to.equal(expectedPrompt);
   })
 });
