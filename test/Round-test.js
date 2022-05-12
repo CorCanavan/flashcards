@@ -4,6 +4,7 @@ const expect = chai.expect;
 const Round = require('../src/Round');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
+const Turn = require('../src/Turn');
 
 describe('Round', () => {
   let card1;
@@ -43,5 +44,13 @@ describe('Round', () => {
 
   it('should return current card being played', () => {
     expect(round.returnCurrentCard()).to.equal(round.deck[0]);
+  });
+
+  it('should increment turns property', () => {
+    round.takeTurn('gaggle');
+    expect(round.turns).to.equal(1);
+
+    round.takeTurn('murder');
+    expect(round.turns).to.equal(2);gi
   })
 });
