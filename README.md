@@ -1,71 +1,55 @@
-# FlashCards Starter Kit
+# FlashCards
+Put your knowledge to the test! Played through the Command-Line-Interface, this program simulates a set of flashcards.
 
-## Fork This Repo
+## Table of Contents
+  - [Technologies](#technologies)
+  - [Features](#features)
+  - [Illustrations](#illustrations)
+  - [GitHub Link](#github-link)
+  - [Possible Future Extensions](#possible-future-extensions)
+  - [Set Up](#set-up)
+  - [Sources](#sources)
+  - [Contributor](#contributor)
+  - [Project Specs](#project-specs)
 
-On the top right corner of this page, click the **Fork** button.
+## Technologies
+- JavaScript
+- Test Driven Development
+- Mocha
+- Chai
 
-## Setup
+## Features
+- This program simulates a set of flashcards through the command line. A user is able to see the questions, take guesses, receive feedback on whether their guess is correct or incorrect, and see a final score at the end of the round.
 
-Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
+## Illustrations
+![Flashcards_Demo_AdobeCreativeCloudExpress (1)](https://user-images.githubusercontent.com/97919748/168183576-4e7b63ce-a1dc-49fc-8494-a20af61e8b4b.gif)
 
-```bash
-git clone [remote-address] [what you want to name the repo]
-```
+## GitHub Link
+Visit my repo link [here](https://github.com/CorCanavan/flashcards)
 
-Once you have cloned the repo, change into the directory and install the library dependencies. Run:
+## Possible Future Extensions
+- At the end of the game, report how much time it took for the user to complete the game in minutes and seconds.
+- Add functionality so that a score of less than 90% will require the user to go through the entire dataset again.
+- At the beginning of the game, give the user options for choosing to study different subjects, as well as the option for mixing all of the subjects together.
 
-```bash
-npm install
-```
+## Set Up
+  1. Fork this repo  
+  2. Clone the repo to your local machine
+  3. Once you have cloned the repo, change into the directory and install the library dependencies. Run:
 
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
+  ```bash
+  npm install
+  ```
+  4. View the program and start the game in the Command-Line-Interface by running `node index.js` in your terminal
 
-Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
+## Sources
+- [Chai](https://www.chaijs.com/api/bdd/)
+- [MDN](http://developer.mozilla.org/en-US/)
+- [Stack Overflow](https://stackoverflow.com/)
 
-```bash
-Your project is running...
-```
+## Contributor
+- [Corinne Canavan](https://github.com/CorCanavan)
+  - [LinkedIn](https://www.linkedin.com/in/corinnecanavan/)
 
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
-
-
-## Where to Add Your Code
-
-### JavaScript
-
-**Create all of your feature code files in the `src` directory.**
-
-We will be using the `module.exports` and `require` syntax to share code across files.
-
-## How to View Your Code in Action
-
-Once you are working through Iteration 3, you will want to start your server to test your functionality.
-In the terminal, run:
-
-```bash
-node index.js
-```
-
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
-
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
-
----
-
-## Test Files Organization
-
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
-
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
-
-## Running Your Tests
-
-Run your test suite using the command:
-
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
-
+## Project Specs
+- The spec for this project can be found [here](https://frontend.turing.edu/projects/flash-cards.html).
