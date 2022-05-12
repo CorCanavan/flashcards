@@ -47,10 +47,18 @@ describe('Round', () => {
   });
 
   it('should increment turns property', () => {
-    round.takeTurn('gaggle');
+    round.takeTurn('dog');
     expect(round.turns).to.equal(1);
 
-    round.takeTurn('murder');
-    expect(round.turns).to.equal(2);gi
+    round.takeTurn('horse');
+    expect(round.turns).to.equal(2);
+  })
+
+  it('should return next card after a turn is taken', () => {
+    expect(round.returnCurrentCard()).to.equal(card1);
+
+    round.takeTurn('elephant');
+
+    expect(round.returnCurrentCard()).to.equal(card2);
   })
 });
