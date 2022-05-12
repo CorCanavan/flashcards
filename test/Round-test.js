@@ -95,7 +95,7 @@ describe('Round', () => {
   });
 
   it('should return prompt with percent correct when endRound is called', () => {
-    const expectedPrompt = '** Round over! ** You answered 33% of the questions correctly!'
+    const expectedPrompt = '** Round over! ** You answered 33% of the questions correctly!';
 
     round.takeTurn('dog');
     round.takeTurn('bat');
@@ -106,5 +106,5 @@ describe('Round', () => {
     expect(round.calculatePercentCorrect()).to.equal(33);
 
     expect(round.endRound()).to.equal(expectedPrompt);
-  })
+  });
 });
