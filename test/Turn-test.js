@@ -35,11 +35,20 @@ describe('Turn', () => {
     expect(turn.returnCard()).to.equal(card);
   });
 
-  it('should evaluate guess to be true or false', () => {
+  it('should evaluate guess to be true if guess equals correct answer', () => {
     expect(turn.evaluateGuess()).to.equal(true);
   });
 
-  it('should return incorrect or correct based on the guess', () => {
-    expect(turn.giveFeedback()).to.equal('correct!');
+  it('should evaluate guess to be false if guess does not equal correct answer', () => {
+    turn = new Turn('array', card);
+    expect(turn.evaluateGuess()).to.equal(false);
+  });
+
+  it('should return incorrect if argument is false', () => {
+    expect(turn.giveFeedback(false)).to.equal('incorrect!');
+  });
+
+  it('should return correct if the argument is true', () => {
+    expect(turn.giveFeedback(true)).to.equal('correct!');
   });
 });
