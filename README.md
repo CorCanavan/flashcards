@@ -1,5 +1,5 @@
 # FlashCards
-Put your knowledge to the test! Played through the Command-Line-Interface, this program simulates a set of flashcards.
+Put your knowledge to the test! Played through the Command-Line-Interface, this program simulates a set of flashcards..
 
 ## Table of Contents
   - [Technologies](#technologies)
@@ -22,7 +22,7 @@ Put your knowledge to the test! Played through the Command-Line-Interface, this 
 - This program simulates a set of flashcards through the command line. A user is able to see the questions, take guesses, receive feedback on whether their guess is correct or incorrect, and see a final score at the end of the round.
 
 ## Illustrations
-![Flashcards_Demo_AdobeCreativeCloudExpress (1)](https://user-images.githubusercontent.com/97919748/168183576-4e7b63ce-a1dc-49fc-8494-a20af61e8b4b.gif)
+https://user-images.githubusercontent.com/97919748/168188809-591cbb78-9db6-4c51-9fa5-b55f78ba51ea.mov
 
 ## GitHub Link
 Visit my repo link [here](https://github.com/CorCanavan/flashcards)
