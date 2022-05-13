@@ -22,7 +22,8 @@ Put your knowledge to the test! Played through the Command-Line-Interface, this 
 - This program simulates a set of flashcards through the command line. A user is able to see the questions, take guesses, receive feedback on whether their guess is correct or incorrect, and see a final score at the end of the round.
 
 ## Illustrations
-https://user-images.githubusercontent.com/97919748/168188809-591cbb78-9db6-4c51-9fa5-b55f78ba51ea.mov
+![Flashcards_SnipSnip](https://user-images.githubusercontent.com/97919748/168189791-52ec83bd-e79c-4819-8e04-aef432a4dcf7.gif)
+
 
 ## GitHub Link
 Visit my repo link [here](https://github.com/CorCanavan/flashcards)
